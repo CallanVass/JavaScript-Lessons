@@ -14,7 +14,7 @@
 // }
 // console.log(y)
 
-let str = "Hello World!"
+// let str = "Hello World!"
 
 // console.log(str.slice(2))
 // console.log(str.replaceAll("o", "---"))
@@ -54,8 +54,50 @@ let str = "Hello World!"
 
 // console.log(x[x.length-1])
 
-function add(x, y) { // define a function
-    return x + y
-}
+// function add(x, y) { // define a function
+//     return x + y
+// }
 
-console.log(add(10, 45))
+
+
+
+// const add = (x, y) => x + y // Arrowhead function
+// const square = x => x ** 2 // With one parameter, the parentheses can be omitted
+// const double = x => x * 2 
+
+
+// console.log(add(10, 45))
+// console.log(square(10))
+
+// const numbers = [12, 13, 56, 43, 21, 2]
+// const result = numbers.map(x => x ** 2) // Replace the paremeter directly with the arrow function
+// console.log(result)
+
+
+
+// // Destructuring
+// const people = ["Matt", "Callan", "Sarah"]
+
+// // const [,first, second] = people // Providing the comma skips an index. Multiple commas can be provided
+// const [first, second, ...others] = people
+// // const first = people[0]
+// // const second = people[1]
+
+// console.log(first, second, others)
+
+// const bobBirds = ["Robin", "Crow"]
+// const sallyBirds = ["Bluejay", "Cardinal"]
+
+// const allBirds = [...bobBirds, ...sallyBirds, "Kookaburra"] // Expansion operator (concatenate arrays)
+
+
+// console.log(allBirds)
+// console.log(bobBirds)
+
+const me = {
+    name: "Callan", age: 51, favouriteColour: "Purple"
+}
+const me2 = { ...me, favouriteColour: "Blue" }
+
+console.log(me)
+console.log(me2)
