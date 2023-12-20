@@ -45,17 +45,29 @@
 
 
 // Iterate through a collection
-const favFoods = ["Pizza", "Pasta", "Tacos"]
-// for (let item of favFoods) {
-//     console.log(item)
+// const favFoods = ["Pizza", "Pasta", "Tacos"]
+// // for (let item of favFoods) {
+// //     console.log(item)
+// // }
+
+// favFoods.forEach((food, index) => {
+//     console.log(`${index+1}. ${food}`)
+// })
+
+// favFoods.forEach(food => {
+//     console.log(food)
+// })
+
+// function sayHi(name) {
+//     console.log("hi", name);
 // }
+  
+// function greet(name, callback) {
+//     callback(name);
+// }
+  
+//   greet("Emma", sayHi);
 
-favFoods.forEach((food, index) => {
-    console.log(`${index+1}. ${food}`)
-})
 
-favFoods.forEach(food => {
-    console.log(food)
-})
 
 
