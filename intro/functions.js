@@ -45,20 +45,32 @@
 //   console.log(factorial(4)); // 24
   
 
-// This
-  function capitalise(value) {
-    // iterate over a list
-    // for each item, capitalise the first letter
-    newArr = value.map(capitaliseList)
-    return newArr
-}
+// // This
+//   function capitalise(value) {
+//     // iterate over a list
+//     // for each item, capitalise the first letter
+//     newArr = value.map(capitaliseList)
+//     return newArr
+// }
 
-function capitaliseList(word) {
-    return word.charAt(0).toUpperCase() + word.slice(1)
-}
-// Is the same as this
-function capitalise(value) {
-    return value.map(word => word.charAt(0).toUpperCase() + word.slice(1))
+// function capitaliseList(word) {
+//     return word.charAt(0).toUpperCase() + word.slice(1)
+// }
+// // Is the same as this
+// function capitalise(value) {
+//     return value.map(word => word.charAt(0).toUpperCase() + word.slice(1))
+//   }
+
+// console.log(capitalise(["selfish", "singer", "woman", "hello"]))
+
+function isNumber(value) {
+    trueOrFalse = value.filter(num => typeof num === "number")
+    if (trueOrFalse.length > 0) {
+        return true
+        } else {
+            return false
+        }
+    
   }
 
-console.log(capitalise(["selfish", "singer", "woman", "hello"]))
+console.log(isNumber(["selfish", "singer", "woman", "hello"]))
