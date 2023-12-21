@@ -27,12 +27,22 @@
 //   // Example usage:
 //   greet("John", sayGoodbye);
 
-function sayHi(name) {
-    console.log("hi", name);
-  }
+// function sayHi(name) {
+//     console.log("hi", name);
+//   }
   
-  function greet(name, callback) {
-    callback(name);
-  } 
+//   function greet(name, callback) {
+//     callback(name);
+//   } 
   
-  greet("Emma", sayHi);
+//   greet("Emma", sayHi);
+
+// function capitaliseFirst(value) {
+//     return value.charAt(0).toUpperCase() + value.slice(1)
+//  }
+
+function capitalise(value) {
+    return value.charAt(0).toUpperCase() + value.slice(1)
+}
+
+console.log(capitalise("one day i will rule the world".split(" ")).join(" "))
