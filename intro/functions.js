@@ -63,14 +63,26 @@
 
 // console.log(capitalise(["selfish", "singer", "woman", "hello"]))
 
-function isNumber(value) {
-    trueOrFalse = value.filter(num => typeof num === "number")
-    if (trueOrFalse.length > 0) {
-        return true
-        } else {
-            return false
-        }
+// function isNumber(value) {
+//     trueOrFalse = value.filter(num => typeof num === "number")
+//     if (trueOrFalse.length > 0) {
+//         return true
+//         } else {
+//             return false
+//         }
     
-  }
+//   }
 
-console.log(isNumber(["selfish", "singer", "woman", "hello"]))
+// console.log(isNumber(["selfish", "singer", "woman", "hello"]))
+
+// function addSuffix(suffix) {
+//     return function (string) {
+//         return string + suffix
+//     }
+// }
+// makeItNice = addSuffix(", hello world")
+
+// console.log(makeItNice("well"))
+
+console.log(this)
+  

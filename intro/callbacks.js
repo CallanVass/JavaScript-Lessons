@@ -41,8 +41,16 @@
 //     return value.charAt(0).toUpperCase() + value.slice(1)
 //  }
 
-function capitalise(value) {
-    return value.charAt(0).toUpperCase() + value.slice(1)
-}
+// function capitaliseFirst(strings) {
+//     return strings.map((string) => string[0].toUpperCase() + string.slice(1))
+//  }
 
-console.log(capitalise("one day i will rule the world".split(" ")).join(" "))
+//  function getTheNumbers(list) {
+//     return list.filter((string) => typeof string === "number")
+//   }
+
+//   function shortestToLongest(list) {
+//     return list.sort((val1, val2) => val1.length - val2.length)
+//   }
+
+// console.log(capitaliseFirst("one day i will rule the world".split(" ")).join(" "))
