@@ -73,18 +73,28 @@ function addEventListeners() {
 
 function changeToDarkMode() {
     // Modify the body's class list to change the page to dark mode
+    let bodySelector = document.querySelector("body")
+    bodySelector.classList.add("darkmode")
 }
 
 function changeToLightMode() {
     // Modify the body's class list to change the page to light mode
+    let bodySelector = document.querySelector("body")
+    bodySelector.classList.remove("darkmode")
 }
 
 function changeBulletsToSquares() {
     // change the bullet cirlces to squares
+    let li = document.querySelectorAll("li")
+    li.forEach((li) => {
+        li.style.listStyleType = "square"
+    })
 }
 
 function changeFontSizeAndColour() {
     // Change the body font styles
+    document.body.style.fontFamily = "Arial"
+    document.body.style.fontSize = "28px"
 }
 
 // Do not change this function
