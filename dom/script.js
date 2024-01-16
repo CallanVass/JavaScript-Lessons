@@ -47,3 +47,20 @@ const ul = document.querySelector("ul")
 const lis = items.map(item => `<li>${item}</li>`)
 console.log(lis)
 ul.innerHTML += lis.join("")
+
+// MDN = Mozilla Developer Network
+
+// Handle a mouseclick on the h1 element
+
+// document.querySelector('h1').addEventListener('click', event => event.target.innerText += "\nha")
+
+// Add item to ul via text bar and button
+
+// Querying to add to list
+const newItem = document.querySelector("#newItem")
+const btn = document.querySelector("button")
+
+btn.addEventListener("click", () => {
+    ul.innerHTML += `<li>${newItem.value}</li>`
+    newItem.value = ""
+})
