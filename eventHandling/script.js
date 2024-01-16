@@ -43,44 +43,105 @@
 //     challengeThree()
 // }
 
+
+
+
+// function challengeOne() {
+//     const form = document.querySelector("form")
+//     const outputElement = document.querySelector("#output")
+  
+
+//     form.addEventListener("submit", event => {
+//       event.preventDefault()
+  
+
+//       const name = document.getElementById("name").value
+//       const language = document.getElementById("language").value
+//       const cohort = document.getElementById("cohort").value
+  
+//       const outputText = `Hello ${name}, hope you are enjoying learning about ${language} in ${cohort}`
+  
+//       outputElement.textContent = outputText
+//     })
+// }
+
+// function challengeTwo() {
+//     let bodySelector = document.querySelector("body")
+    
+//     let button = document.querySelector("#change-theme")
+//     button.addEventListener("click", () => {
+//         bodySelector.classList.toggle("darkmode")
+
+//         const isDarkMode = bodySelector.classList.contains("darkmode")
+//         button.textContent = isDarkMode ? "Dark Mode" : "Light Mode"
+//     })
+
+// }
+
+// function challengeThree() {
+//     function drag(dragevent) {
+//         dragevent.dataTransfer.setData("text", dragevent.target.id)
+//     }
+//     function drop(dropevent) {
+//         dropevent.preventDefault()
+//         let data = dropevent.dataTransfer.getData("text")
+//         let child = document.getElementById(data)
+//         dropevent.target.appendChild(child)
+//         if (dropevent.target.id == "to") {
+//             child.style.backgroundColor = "green"
+//         } else {
+//             child.style.backgroundColor = "red"
+//         }
+//     }
+
+//     function allowDrop(allowdropevent) {
+//         allowdropevent.preventDefault()
+//     }
+
+//     let divs = document.querySelectorAll(".drag")
+//     for (div of divs) {
+//         div.addEventListener("dragover", allowDrop)
+//         div.addEventListener("drop", drop)
+//         console.log(div)
+//     }
+
+//     document.getElementById("dragger").addEventListener('dragstart', drag)
+// }    
+
+// function activity() {
+//     challengeOne()
+//     challengeTwo()
+//     challengeThree()
+// }
+
+
+
+
+
 function challengeOne() {
-    const form = document.querySelector("form")
-    const outputElement = document.querySelector("#output")
-  
-
-    form.addEventListener("submit", event => {
-      event.preventDefault()
-  
-
-      const name = document.getElementById("name").value
-      const language = document.getElementById("language").value
-      const cohort = document.getElementById("cohort").value
-  
-      const outputText = `Hello ${name}, hope you are enjoying learning about ${language} in ${cohort}`
-  
-      outputElement.textContent = outputText
-    })
+    function changeValue(value) {
+        // This is the callback function for the event handler
+        // It should increment the value in the <p> by value
+    }
+    // Challenge 1: Add an event listener to each button that invokes
+    // the changeValue handler function with the correct value for the button
 }
 
 function challengeTwo() {
-    let bodySelector = document.querySelector("body")
-    
-    let button = document.querySelector("#change-theme")
-    button.addEventListener("click", () => {
-        bodySelector.classList.toggle("darkmode")
+    function changeValue(event) {
+        // This is the callback function for the event handler
+        // It should either increment the value, decrement the value,
+        // or stop changing the value in the <p> based on the button that is clicked
 
-        const isDarkMode = bodySelector.classList.contains("darkmode")
-        button.textContent = isDarkMode ? "Dark Mode" : "Light Mode"
-    })
-
+    }
+    // Challenge 2: Use the event target to determine the value on the button
+    // that triggered the click event. Add that value to the current value
+    // in the paragraph and update what is shown on the page.
+    // When the Stop button is clicked, the event handlers should all be removed.
 }
 
-function challengeThree() {
-
-}    
 
 function activity() {
     challengeOne()
     challengeTwo()
-    challengeThree()
 }
