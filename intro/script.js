@@ -94,10 +94,29 @@
 // console.log(allBirds)
 // console.log(bobBirds)
 
-const me = {
-    name: "Callan", age: 51, favouriteColour: "Purple"
-}
-const me2 = { ...me, favouriteColour: "Blue" }
+// const me = {
+//     name: "Callan", age: 51, favouriteColour: "Purple"
+// }
+// const me2 = { ...me, favouriteColour: "Blue" }
 
-console.log(me)
-console.log(me2)
+// console.log(me)
+// console.log(me2)
+
+// Print array
+function createNewArray() {
+    const arr = ["Callan", "Simon", "Neil", "James"]
+    let newArr = []
+    for (let name of arr) {
+        newArr.push(name)
+    }
+    console.log(arr)
+    console.log(newArr)
+    while (newArr.length > 0) {
+        newArr.shift()
+    }
+    console.log(newArr)
+
+}
+
+createNewArray()
+
