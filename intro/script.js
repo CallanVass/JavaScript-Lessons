@@ -111,12 +111,48 @@ function createNewArray() {
     }
     console.log(arr)
     console.log(newArr)
-    while (newArr.length > 0) {
-        newArr.shift()
-    }
-    console.log(newArr)
+    
 
 }
 
-createNewArray()
+
+// ARRAYS
+// push()
+// pop()
+// splice()
+// slice()
+// concat()
+// filter()
+// map()
+// replace()
+// forEach()
+// indexOf()
+// reverse()
+let fruits = ['apple', 'banana', 'orange']
+let aFruits = fruits.filter(fruit => fruit.includes('apple'))
+let differentFruits = fruits.map(fruit => fruit.replace("apple", "Apple"))
+let emptyFruit = []
+let bananaIndex = fruits.indexOf('orange')
+fruits.forEach(fruit => emptyFruit.push(fruit))
+let reversedFruits = fruits.reverse()
+
+let slicedFruit = fruits.slice(1, 2)
+let combinedFruits = fruits.concat(slicedFruit)
+
+// while (true) {
+//     fruits.splice(2, 0, 'grape')
+//     console.log(fruits)
+// }
+console.log(fruits)
+console.log(slicedFruit)
+console.log(combinedFruits)
+console.log(aFruits)
+console.log(differentFruits)
+console.log(emptyFruit)
+console.log(bananaIndex)
+console.log(reversedFruits)
+
+
+OBJECTS
+
 
