@@ -1,4 +1,5 @@
 import express from 'express'
+import mongoose from 'mongoose'
 
 const categories = ["Food", "Gaming", "Coding", "Other"]
 
@@ -9,6 +10,18 @@ const entries = [
 
 ]
 
+// Mongoose Connection String (with connection to journal db)
+mongoose.connect()
+    .then(m => console.log(m.connection.readyState === 1 ? 'MongoDB connected!' : 'Mongoose connection failed!'))
+    .catch(err => console.log(err))
+
+
+const entriesSchema = new mongoose.Schema({
+    category: {type: String, required: true},
+    content: {type: String, required: true}
+})
+
+const EntryModel = mongoose.model('Entry', entriesSchema)
 
 // Instance of application
 const app = express()
@@ -41,15 +54,20 @@ app.get('/entries/:id', (req, res) => {
 })
 
 // HTTP request (POST)
-app.post('/entries', (req, res) => {
+app.post('/entries', async (req, res) => {
+    try {
     // Get entry data from the request
-    console.log(req.body)
+    // console.log(req.body)
     // TODO: Validate
     // Create a new entry object
     // Push the new entry to the array
-    entries.push(req.body)
+    // entries.push(req.body)
+    const insertedEntry = await EntryModel.create(req.body)
     // Respond with 201 and the created entry
-    res.status(201).send(entries[entries.length - 1])
+    res.status(201).send(insertedEntry)
+    } catch (err) {
+        res.status(400).send({ error: err.message })
+    }
 })
 
 
