@@ -15,12 +15,40 @@ app.get('/', (req, res) => {
 
 // TODO: Move Categories to routes folder
 // TODO: Complete categories CRUD
-// TODO: ADVANCED: Add a route /categories/:cat_id/entries that returns all entries in the given category
+// TODO: ADVANCED: Modify "GET /categories/id" to embed an array of all the entries in that category
 
 // HTTP request (GET)
 app.get('/categories', async (req, res) => {
     res.status(201).send(await CategoryModel.find())
 })
+
+// Calculator ED Challenge
+app.get('/calculator/:num1/:operator/:num2', (req, res) => {
+    const num1 = parseFloat(req.params.num1)
+    const num2 = parseFloat(req.params.num2)
+    const operator = req.params.operator
+
+    let result;
+    switch (operator) {
+        case "add":
+            result = num1 + num2
+            break
+        case "subtract":
+            result = num1 - num2
+            break
+        case "multiply":
+            result = num1 * num2
+            break
+        case "divide":
+            result = num1 / num2
+            break
+        default:
+            return res.status(404).send({error: "Invalid operator."})
+
+    }
+    res.send({ result })
+})
+
 
 app.use('/entries', entryRoutes)
 
