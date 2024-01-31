@@ -25,7 +25,7 @@
 
 
 import React, { useState } from 'react'
-import Bitcoinindex from './Bitcoinindex'
+import Bitcoinindex from './BitcoinIndex'
 // use = a hook
 
 
@@ -33,7 +33,7 @@ const App = () => {
   return (
     <>
     <h1>Bitcoin Index</h1>
-    <Bitcoinindex />
+    <Bitcoinindex/>
     </>
   )
 }
