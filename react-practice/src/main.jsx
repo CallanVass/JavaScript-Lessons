@@ -1,12 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import Nav from './Nav.jsx'
-import 'bootstrap/dist/css/bootstrap.css'
+import NavBar from './components/NavBar.jsx'
+import './index.css'
+import SearchMaterial from './components/SearchMaterial.jsx'
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App>
-    </App>
+    <NavBar />
+    <SearchMaterial />
   </React.StrictMode>,
 )

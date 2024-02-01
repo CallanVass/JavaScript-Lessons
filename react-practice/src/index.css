@@ -1,7 +1,74 @@
-.list-group {
-    color: red;
-    font-weight: 400;
-    font-size: 40;
-    font-size: 26;
-}
-
+.navbar {
+    background-color: #f0f0f0; /* Light grey background */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .nav-items {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-item {
+    margin-left: 20px;
+    position: relative;
+  }
+  
+  .nav-item a, .nav-item button {
+    text-decoration: none;
+    color: black;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 5px 0;
+    z-index: 1000;
+  }
+  
+  .dropdown-item {
+    display: block;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .search-form {
+    display: flex;
+    margin-left: 20px;
+  }
+  
+  .search-form input, .search-form button {
+    padding: 5px;
+    margin-left: 5px;
+  }
+  
+  .search-form button {
+    cursor: pointer;
+  }
