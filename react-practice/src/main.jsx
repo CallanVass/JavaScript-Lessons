@@ -8,7 +8,7 @@ import SearchMaterial from './components/SearchMaterial.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <NavBar />
+    {/* <NavBar /> */}
     <SearchMaterial />
   </React.StrictMode>,
 )
