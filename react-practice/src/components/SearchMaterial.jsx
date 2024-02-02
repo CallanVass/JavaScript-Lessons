@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
+import NavBar from './NavBar'
 
 const SearchMaterial = () => {
     const [name, setName] = useState("Callan")
     const [num, setNum] = useState(1)
+    const berry = "Juniper"
 
     function nameFunction() {
         if (num === 0) {
@@ -16,6 +18,7 @@ const SearchMaterial = () => {
 // WATCH PROPS LESSION FROM NET NINJA
   return (
     <>
+    <NavBar name={berry}/>
     <section>
         <h1>Some {name}</h1>
         <button onClick={nameFunction}>Click Me to change name!</button>

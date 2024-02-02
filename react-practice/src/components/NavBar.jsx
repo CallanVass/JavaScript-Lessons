@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 
-const NavBar = () => {
+const NavBar = ({ name }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+//   const name = props.name
 
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <a className="navbar-brand" href="#">Navbar</a>
+        <a className="navbar-brand" href="#">{name}</a>
         <div className="nav-items">
           <a className="nav-item" href="#">Home</a>
           <div className="nav-item dropdown">
