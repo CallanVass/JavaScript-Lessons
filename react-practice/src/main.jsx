@@ -1,14 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import NavBar from './components/NavBar.jsx'
 import './index.css'
-import SearchMaterial from './components/SearchMaterial.jsx'
+import RedLight from './components/RedLight'
+import OrangeLight from './components/OrangeLight'
+import GreenLight from './components/GreenLight'
+import Traffic from './components/Traffic'
+
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    {/* <NavBar /> */}
-    <SearchMaterial />
-  </React.StrictMode>,
+    <>
+    <RedLight/>
+    <OrangeLight/>
+    <GreenLight/>
+    <Traffic/>
+    </>
 )

@@ -1,74 +1,71 @@
-.navbar {
-    background-color: #f0f0f0; /* Light grey background */
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
+.red-light-parent{
+    background-color: lightcoral;
+    height: 30vh;
     width: 100%;
-  }
-  
-  .navbar-brand {
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
-  }
-  
-  .nav-items {
     display: flex;
+    justify-content: center; 
     align-items: center;
-  }
-  
-  .nav-item {
-    margin-left: 20px;
-    position: relative;
-  }
-  
-  .nav-item a, .nav-item button {
-    text-decoration: none;
-    color: black;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 5px 0;
-    z-index: 1000;
-  }
-  
-  .dropdown-item {
-    display: block;
-    padding: 5px 20px;
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-  }
-  
-  .dropdown-item:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .search-form {
+    transition: background-color 1s ease;
+}
+
+.red-light-child{
+    background-color: red;
+    height: 15vh;
+    width: 15vh;
+    border-radius: 50%;
+    border: 10px solid black;
+}
+
+.red-light-parent:hover{
+    background-color: red;
+}
+
+.orange-light-parent{
+    background-color: lightsalmon;
+    height: 30vh;
+    width: 100%;
     display: flex;
-    margin-left: 20px;
-  }
-  
-  .search-form input, .search-form button {
-    padding: 5px;
-    margin-left: 5px;
-  }
-  
-  .search-form button {
-    cursor: pointer;
+    justify-content: center; 
+    align-items: center;
+    transition: background-color 1s ease;
+}
+
+.orange-light-child{
+    background-color: rgb(233, 84, 25);
+    height: 15vh;
+    width: 15vh;
+    border-radius: 50%;
+    border: 10px solid black;
+}
+
+.orange-light-parent:hover{
+    background-color: rgb(233, 84, 25);
+}
+
+.green-light-parent{
+    background-color: lightgreen;
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    transition: background-color 1s ease;
+}
+
+.green-light-child{
+    background-color: green;
+    height: 15vh;
+    width: 15vh;
+    border-radius: 50%;
+    border: 10px solid black;
+}
+
+.green-light-parent:hover{
+    background-color: green;
+}
+
+#car-container {
+    overflow: hidden;
+    position: relative;
+    height: 50px; /* Adjust based on your needs */
   }
