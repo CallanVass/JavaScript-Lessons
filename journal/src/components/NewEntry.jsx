@@ -1,32 +1,40 @@
-import React, { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import React, { useState } from "react"
+import { useParams } from "react-router-dom"
 
-
-const NewEntry = ({ categories, setEntries, entries }) => {
+// Recieve categories and addEntry from App.jsx
+const NewEntry = ({ categories, addEntry }) => {
+    // Use useParams hook to eventually fetch categories params
     const params = useParams()
-    const [entry, setEntry] = useState("")
+    // useState hook to set entry to an empty string
+    const [entry, setEntry] = useState('')
 
     function createEntry(e) {
+        // Stops browser refreshing (default activity for a button)
         e.preventDefault()
-        // Create a new entry
-        // 1. Create a entry object from the user input
-        const newEntry = {
-            category: params.cat_id,
-            content: entry
-        }
-        // 2. Add new entry to the entries list
-        setEntries([...entries, newEntry])
+        // Create a new entry using addEntry from App.jsx and params (useParams)
+        addEntry(params.cat_id, entry)
+        // Clear input textarea after submission
+        setEntry('')
     }
-  return (
-    <>
-        <h3>New entry in category {categories[params.cat_id]}</h3>
-        <form className="writing-form" onSubmit={createEntry}>
-            <b>Content</b>
-            <textarea className="textarea is-primary" value={entry} onChange={e => setEntry(e.target.value)} placeholder="Write your innermost thoughts her, Goose..."></textarea>
-            <button className="button is-dark journal-submit">Create Entry</button>
-        </form>
-    </>
-  )
+
+    return (
+        <>
+            <h3>New entry in category {categories[params.cat_id]}</h3>
+            <form className="section" onSubmit={createEntry}>
+                <div className="field">
+                    <label className="label">Content</label>
+                    <div className="control">
+                        <textarea className="textarea" value={entry} onChange={e => setEntry(e.target.value)} placeholder="Type your journal entry here"></textarea>
+                    </div>
+                </div>
+                <div className="field is-grouped">
+                    <div className="control">
+                        <button className="button is-link">Create Entry</button>
+                    </div>
+                </div>
+            </form>
+        </>
+    )
 }
 
 export default NewEntry
